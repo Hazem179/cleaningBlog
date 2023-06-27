@@ -103,12 +103,18 @@
             <div class="category-pragraph">
               <h4 class="card">الخدمات التي نقدمها</h4>
               <ol>
-                <li><a href="">خدمات التنظيف الشاملة</a></li>
-                <li><a href="">خدمات التنظيف الشاملة</a></li>
-                <li><a href="">خدمات التنظيف الشاملة</a></li>
-                <li><a href="">خدمات التنظيف الشاملة</a></li>
-                <li><a href="">خدمات التنظيف الشاملة</a></li>
-                <li><a href="">خدمات التنظيف الشاملة</a></li>
+                  {% for category in categories %}
+                <li>
+                  <a href="{% url 'core:category' slug=category.slug  %}">{{ category }}</a>
+                    <ol>
+                {% for subcategory in subcategories %}
+                {% if subcategory.category == category %}
+                        <li> <a href="{% url 'core:category' slug=subcategory.slug  %}">{{subcategory}}</a></li>
+                {% endif %}
+                {% endfor %}
+                    </ol>
+                </li>
+                  {% endfor %}
               </ol>
             </div>
             <!-- Category Pragraph -->
@@ -120,13 +126,9 @@
                 التالية:
               </p>
               <ol>
-                <li>حفر الباطن.</li>
-                <li>حفر الباطن.</li>
-                <li>حفر الباطن.</li>
-                <li>حفر الباطن.</li>
-                <li>حفر الباطن.</li>
-                <li>حفر الباطن.</li>
-                <li>حفر الباطن.</li>
+                  {% for city in cities %}
+                <li><a href="{% url 'core:category' city.slug %}">{{ city.name }}</a></li>
+                  {% endfor %}
               </ol>
             </div>
           </div>

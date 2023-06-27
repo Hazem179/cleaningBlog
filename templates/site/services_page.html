@@ -5,34 +5,23 @@
         <section class="tags services-page" aria-labelledby="tag-label">
           <div class="container">
             <h2 class="headline headline-2 section-title" id="tag-label">
-              <span class="span">خدمات سما كلين | 0506735658 </span>
+              <span class="span">خدمات سما كلين | {{ contact_information.telephone }} </span>
             </h2>
 
             <p class="section-text">نقدم لك العديد من الخدمات</p>
             <ul class="grid-list">
-              <!-- Service Item -->
+                {% for category in categories %}
               <li>
-                <button class="card tag-btn">
+                <a href="{{ category.slug }}" class="card tag-btn">
                   <div>
-                    <img
-                      src="./assets/images/tag2.png"
-                      width="32"
-                      height="32"
-                      loading="lazy"
-                      alt="Culture"
-                    />
-
-                    <p class="btn-text">خدمات العزل</p>
+                    <h3 class="btn-text">{{ category.name }}</h3>
                   </div>
                   <p>
-                    شركة تنظيف بحفر الباطن الألمانية كلين متميزة للغاية في جميع
-                    الخدمات الخاصة بكل شركة تنظيف بحفر الباطن كما أننا نتميز في
-                    خدمات شركة تنظيف منازل بحفر الباطن. ولهذا يجب عليك التعامل
-                    مع شركة الألمانية كلين أفضل شركة تنظيف خزانات بحفر الباطن
-                    كما أننا نضمن لك..
+                      {{ category.description }}
                   </p>
-                </button>
+                </a>
               </li>
+                {% endfor %}
             </ul>
           </div>
         </section>

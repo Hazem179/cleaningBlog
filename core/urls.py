@@ -9,4 +9,5 @@ urlpatterns = [
     path('services',views.services, name='services'),
     path('blog', views.blog, name='blog'),
     path('frequently_questions', views.frequently_questions, name='frequently_questions'),
+    path('category/<str:slug>', views.category, name='category'),
 ]

@@ -695,10 +695,6 @@
                 </ul>
             </div>
         </section>
-
-        <!--
-        - #Accordion
-      -->
         <section class="accordion" aria-labelledby="accordion-label">
             <div class="container">
                 <h2 class="headline headline-2 section-title" id="accordion-label">
@@ -707,60 +703,17 @@
                 <div class="acc-container">
                     <div class="right">
                         <ul>
-                            <li class="card">
-                                <input type="checkbox" checked/>
-                                <i></i>
-                                <h3>ما اضرار حشرة النمل الابيض على اثاث منزلك؟</h3>
-                                <p>
-                                    النمل الأبيض من الممكن يتسبب في العديد من الأضرار داخل
-                                    منزلك في حالة لم يتم مكافحته بالطريقة الصحيحة مع شركة
-                                    متخصصة مثل شركة سما كلين 0554926391. وتشمل بعض اضرار
-                                    انتشار حشرة النمل الابيض او الارضة داخل منزلك الاضرار
-                                    التالية: النمل الأبيض عبارة عن حشرات صغيرة تعيش في
-                                    مستعمرات على الأرض. يمكن أن تسبب هذه الحشرات أضرارًا جسيمة
-                                    لأثاث منزلك إذا لم يتم السيطرة عليها. يأكل النمل الأبيض
-                                    خشب أثاثك ويضعفه ويؤدي في النهاية إلى انهياره. بالإضافة
-                                    إلى ذلك، ينتج النمل الأبيض أيضًا مادة يمكن أن تلطيخ أثاثك.
-                                    إذا كان لديك نمل أبيض في منزلك، فمن المهم أن تتخذ خطوات
-                                    للسيطرة عليها وإصلاح أي ضرر تسبب فيه. يتغذى النمل الأبيض
-                                    على الخشب، وإذا وصل إلى منزلك، يمكن أن يلحق الكثير من
-                                    الضرر بأثاثك. إذا كان لديك نمل أبيض في منزلك، فقد تلاحظ أن
-                                    أثاثك بدأ يبدو بالية أو تالفة. قد تلاحظ أيضًا أن النمل
-                                    الأبيض قد ترك وراءه أكوامًا صغيرة من نشارة الخشب. إذا رأيت
-                                    أيًا من هذه العلامات، فمن المهم الاتصال بشركة مكافحة
-                                    الآفات 0554926391 للتخلص من النمل الأبيض قبل أن يتسبب في
-                                    المزيد من الضرر. لذلك إذا كان لديك نمل أبيض في منزلك، فمن
-                                    المهم الاتصال بأخصائي مكافحة الآفات للتخلص منها قبل أن
-                                    تتسبب في المزيد من الضرر.
-                                </p>
-                            </li>
-                            <li class="card">
-                                <input type="checkbox" checked/>
-                                <i></i>
-                                <h3>How it Works</h3>
-                                <p>
-                                    Using the sibling and checked selectors, we can determine
-                                    the styling of sibling elements based on the checked state
-                                    of the checkbox input element. One use, as demonstrated
-                                    here, is an entirely CSS and HTML accordion element. Media
-                                    queries are used to make the element responsive to
-                                    different screen sizes.
-                                </p>
-                            </li>
-                            <li class="card">
-                                <input type="checkbox" checked/>
-                                <i></i>
-                                <h3>Points of Interest</h3>
-                                <p>
-                                    By making the open state default for when :checked isn't
-                                    detected, we can make this system accessable for browsers
-                                    that don't recognize :checked. The fallback is simply an
-                                    open accordion. The accordion can be manipulated with
-                                    Javascript (if needed) by changing the "checked" property
-                                    of the input element.
-                                </p>
-                            </li>
-                        </ul>
+                  {% for question in questions %}
+                <li class="card">
+                  <input type="checkbox" checked />
+                    <i></i>
+                  <h3>{{ question.title }}</h3>
+                  <p>
+                    {{ question.content }}
+                  </p>
+                </li>
+                {% endfor %}
+              </ul>
                     </div>
                     <div class="left">
                         <div class="image-info">

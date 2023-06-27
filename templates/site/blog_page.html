@@ -2,10 +2,6 @@
 {% load static %}
 {% block content %}
 <article>
-        <!-- 
-      - #RECENT POST
-    -->
-
         <section
           class="section recent-post"
           id="recent"
@@ -20,6 +16,7 @@
               <p class="section-text">لا تفوت الجديد</p>
 
               <ul class="grid-list">
+                {% for post in posts %}
                 <li>
                   <div class="recent-post-card">
                     <figure
@@ -27,7 +24,7 @@
                       style="--width: 271; --height: 258"
                     >
                       <img
-                        src="./assets/images/recent-post-1.jpg"
+                        src="{{ post.image.url }}"
                         width="271"
                         height="258"
                         loading="lazy"
@@ -37,40 +34,20 @@
                     </figure>
 
                     <div class="card-content">
-                      <a href="#" class="card-badge">Working Tips</a>
+                      <a href="{{ post.subcategory.slug }}" class="card-badge">{{ post.subcategory }}</a>
 
                       <h3 class="headline headline-3 card-title">
-                        <a href="#" class="link hover-2"
-                          >Helpful Tips for Working from Home as a Freelancer</a
-                        >
+                        <a href="{{ post.slug }}" class="link hover-2"
+                          >{{ post.title }}</a>
                       </h3>
 
                       <p class="card-text">
-                        Gosh jaguar ostrich quail one excited dear hello and
-                        bound and the and bland moral misheard roadrunner
-                        flapped lynx far that and jeepers giggled far and far
+                        {{ post.description|truncatechars:100 }}
                       </p>
-
-                      <div class="card-wrapper">
-                        <div class="card-tag">
-                          <a href="#" class="span hover-2"># Travel</a>
-
-                          <a href="#" class="span hover-2"># Lifestyle</a>
-                        </div>
-
-                        <div class="wrapper">
-                          <ion-icon
-                            name="time-outline"
-                            aria-hidden="true"
-                          ></ion-icon>
-
-                          <span class="span">3 mins read</span>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </li>
-
+                {% endfor %}
               </ul>
 
               <nav aria-label="pagination" class="pagination">
@@ -90,90 +67,89 @@
               </nav>
             </div>
 
-            <div class="post-aside grid-list">
-              <div class="card aside-card">
-                <h3 class="headline headline-2 aside-title">
-                  <span class="span">Popular Posts</span>
-                </h3>
-
-                <ul class="popular-list">
-                  <li>
-                    <div class="popular-card">
-                      <figure
-                        class="card-banner img-holder"
-                        style="--width: 64; --height: 64"
-                      >
-                        <img
-                          src="./assets/images/popular-post-1.jpg"
-                          width="64"
-                          height="64"
-                          loading="lazy"
-                          alt="Creating is a privilege but it’s also a gift"
-                          class="img-cover"
-                        />
-                      </figure>
-
-                      <div class="card-content">
-                        <h4 class="headline headline-4 card-title">
-                          <a href="#" class="link hover-2"
-                            >Creating is a privilege but it’s also a gift</a
-                          >
-                        </h4>
-
-                        <div class="warpper">
-                          <p class="card-subtitle">15 mins read</p>
-
-                          <time class="publish-date" datetime="2022-04-15"
-                            >15 April 2022</time
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-
-                </ul>
-              </div>
-
-              <div class="card aside-card">
-                <h3 class="headline headline-2 aside-title">
-                  <span class="span">Last Comment</span>
-                </h3>
-
-                <ul class="comment-list">
-                  <li>
-                    <div class="comment-card">
-                      <blockquote class="card-text">
-                        “ Gosh jaguar ostrich quail one excited dear hello and
-                        bound and the and bland moral misheard roadrunner “
-                      </blockquote>
-
-                      <div class="profile-card">
-                        <figure class="profile-banner img-holder">
-                          <img
-                            src="./assets/images/author-6.png"
-                            width="32"
-                            height="32"
-                            loading="lazy"
-                            alt="Jane Cooper"
-                          />
-                        </figure>
-
-                        <div>
-                          <p class="card-title">Jane Cooper</p>
-
-                          <time class="card-date" datetime="2022-04-15"
-                            >15 April 2022</time
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-          </div>
+{#            <div class="post-aside grid-list">#}
+{#              <div class="card aside-card">#}
+{#                <h3 class="headline headline-2 aside-title">#}
+{#                  <span class="span">Popular Posts</span>#}
+{#                </h3>#}
+{##}
+{#                <ul class="popular-list">#}
+{#                  <li>#}
+{#                    <div class="popular-card">#}
+{#                      <figure#}
+{#                        class="card-banner img-holder"#}
+{#                        style="--width: 64; --height: 64"#}
+{#                      >#}
+{#                        <img#}
+{#                          src="./assets/images/popular-post-1.jpg"#}
+{#                          width="64"#}
+{#                          height="64"#}
+{#                          loading="lazy"#}
+{#                          alt="Creating is a privilege but it’s also a gift"#}
+{#                          class="img-cover"#}
+{#                        />#}
+{#                      </figure>#}
+{##}
+{#                      <div class="card-content">#}
+{#                        <h4 class="headline headline-4 card-title">#}
+{#                          <a href="#" class="link hover-2"#}
+{#                            >Creating is a privilege but it’s also a gift</a#}
+{#                          >#}
+{#                        </h4>#}
+{##}
+{#                        <div class="warpper">#}
+{#                          <p class="card-subtitle">15 mins read</p>#}
+{##}
+{#                          <time class="publish-date" datetime="2022-04-15"#}
+{#                            >15 April 2022</time#}
+{#                          >#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </li>#}
+{##}
+{#                </ul>#}
+{#              </div>#}
+{##}
+{#              <div class="card aside-card">#}
+{#                <h3 class="headline headline-2 aside-title">#}
+{#                  <span class="span">Last Comment</span>#}
+{#                </h3>#}
+{##}
+{#                <ul class="comment-list">#}
+{#                  <li>#}
+{#                    <div class="comment-card">#}
+{#                      <blockquote class="card-text">#}
+{#                        “ Gosh jaguar ostrich quail one excited dear hello and#}
+{#                        bound and the and bland moral misheard roadrunner “#}
+{#                      </blockquote>#}
+{##}
+{#                      <div class="profile-card">#}
+{#                        <figure class="profile-banner img-holder">#}
+{#                          <img#}
+{#                            src="./assets/images/author-6.png"#}
+{#                            width="32"#}
+{#                            height="32"#}
+{#                            loading="lazy"#}
+{#                            alt="Jane Cooper"#}
+{#                          />#}
+{#                        </figure>#}
+{##}
+{#                        <div>#}
+{#                          <p class="card-title">Jane Cooper</p>#}
+{##}
+{#                          <time class="card-date" datetime="2022-04-15"#}
+{#                            >15 April 2022</time#}
+{#                          >#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </li>#}
+{##}
+{#                </ul>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
         </section>
-        -->
       </article>
    {% endblock %}

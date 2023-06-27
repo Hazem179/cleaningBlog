@@ -31,7 +31,7 @@
                     <p class="footer-list-title">البريد الالكترونى</p>
 
                     <address class="footer-text address">
-                        admin@germancleaning.com
+                        {{ contact_information.email_link }}
                     </address>
                 </div>
 
@@ -63,28 +63,28 @@
             <div class="footer-bottom">
                 <ul class="social-list">
                     <li>
-                        <a href="#" class="social-link">
+                        <a href="{{ contact_information.twitter_link }}" class="social-link">
                             <ion-icon name="logo-twitter"></ion-icon>
 
                             <span class="span">Twitter</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="social-link">
+                        <a href="{{ contact_information.facebook_link }}" class="social-link">
                             <ion-icon name="logo-facebook"></ion-icon>
 
                             <span class="span">facebook</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="social-link">
+                        <a href="{{ contact_information.snapchat_link }}" class="social-link">
                             <ion-icon name="logo-snapchat"></ion-icon>
 
                             <span class="span">snapchat</span>
                         </a>
                     </li>
                     <li>
-                        <a href="tel:+966554926391" class="social-link">
+                        <a href="{{ contact_information.phone_number }}" class="social-link">
                             <ion-icon name="call-outline"></ion-icon>
 
                             <span class="span">Call</span>
@@ -93,7 +93,7 @@
 
                     <li>
                         <a
-                                href="https://api.whatsapp.com/send?phone=00966554926391"
+                                href="https://api.whatsapp.com/send?phone={{ contact_information.phone_number }}"
                                 class="social-link"
                         >
                             <ion-icon name="logo-whatsapp"></ion-icon>
@@ -101,17 +101,8 @@
                             <span class="span">whatsapp</span>
                         </a>
                     </li>
-
                     <li>
-                        <a href="#" class="social-link">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-
-                            <span class="span">LinkedIn</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="social-link">
+                        <a href="{{ contact_information.instagram }}" class="social-link">
                             <ion-icon name="logo-instagram"></ion-icon>
 
                             <span class="span">Instagram</span>
