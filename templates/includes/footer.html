@@ -1,0 +1,124 @@
+{% load static %}
+
+<footer>
+    <div class="container">
+        <div class="card footer">
+            <div class="section footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img
+                                src="{% static 'images/logo.png' %}"
+                                width="119"
+                                height="37"
+                                loading="lazy"
+                                alt="logo"
+                        />
+                    </a>
+
+                    <p class="footer-text">
+                        أفضل شركة تقدم خدمات منزلية في المملكة العربية السعودية بالكامل.
+                        خدمة تنظيف المنازل والسجاد والكنب والمجالس والستائر والمكيفات
+                        وجلي البلاط والسيراميك في حفر الباطن والدمام وعرعر والقيصومة
+                        وسكاكا ودومة الجندل وخميس مشيط وابها.
+                    </p>
+
+                    <p class="footer-list-title">مكان تواجدنا</p>
+
+                    <address class="footer-text address">
+                        المملكة العربية السعودية ,<br/>
+                        حفر الباطن
+                    </address>
+                    <p class="footer-list-title">البريد الالكترونى</p>
+
+                    <address class="footer-text address">
+                        admin@germancleaning.com
+                    </address>
+                </div>
+
+                <div class="footer-list">
+                    <p class="footer-list-title">روابط قد تهمك</p>
+
+                    <ul>
+                        <li>
+                            <a href="{% url 'core:blog' %}" class="footer-link hover-2">المدونة</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'core:services' %}" class="footer-link hover-2">الخدمات</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'core:about' %}" class="footer-link hover-2">عن شركتنا</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'core:frequently_questions' %}" class="footer-link hover-2"
+                            >أهم اسئلة عملائنا الشائعة</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <ul class="social-list">
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+
+                            <span class="span">Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+
+                            <span class="span">facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-snapchat"></ion-icon>
+
+                            <span class="span">snapchat</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+966554926391" class="social-link">
+                            <ion-icon name="call-outline"></ion-icon>
+
+                            <span class="span">Call</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                                href="https://api.whatsapp.com/send?phone=00966554926391"
+                                class="social-link"
+                        >
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+
+                            <span class="span">whatsapp</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+
+                            <span class="span">LinkedIn</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+
+                            <span class="span">Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

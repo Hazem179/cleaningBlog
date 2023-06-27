@@ -1,0 +1,53 @@
+{% load static %}
+<header class="header" data-header="">
+      <div class="container">
+        <a href="{% url 'core:home' %}" class="logo">
+          <img src="{% static 'images/logo.png' %}" width="119" height="37" alt="logo">
+        </a>
+
+        <nav class="navbar" data-navbar="">
+          <div class="navbar-top">
+            <a href="{% url 'core:home' %}" class="logo">
+              <img src="{% static 'images/logo.png' %}" width="119" height="37" alt=" logo">
+            </a>
+
+            <button class="nav-close-btn" aria-label="close menu" data-nav-toggler="">
+              <ion-icon name="close-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+            </button>
+          </div>
+
+
+    <ul class="navbar-list">
+        {% for category in categories %}
+        <li>
+            <a href="#home" class="navbar-link hover-1" data-nav-toggler
+            >{{category}}</a
+            >
+            <div class="dropdown">
+                {% for subcategory in subcategories %}
+                {% if subcategory.category == category %}
+                <a class="dropdown-item">{{subcategory}}</a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+        </nav>
+
+        <a href="javascript:void(0)" class="btn btn-primary search_btn">بحث
+
+          <div class="search_container">
+            <form class="search_box card">
+              <input type="text">
+              <ion-icon class="icon md hydrated" name="search-outline" role="img" aria-label="search outline"></ion-icon>
+            </form>
+          </div>
+        </a>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler="">
+          <ion-icon name="menu-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+        </button>
+      </div>
+    </header>
+

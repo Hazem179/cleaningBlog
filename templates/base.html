@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--
+    - primary meta tags
+  -->
+
+    <title>سما كلين لخدمات التنظيف ومكافحة الحشرات</title>
+    <meta name="title" content="سما كلين لخدمات التنظيف ومكافحة الحشرات"/>
+    <meta
+            name="description"
+            content="سما كلين لخدمات التنظيف ومكافحة الحشرات "
+    />
+
+    <!--
+    - favicon
+  -->
+    <link
+            rel="shortcut icon"
+            href="{% static 'images/logo.png' %}"
+            type="image/svg+xml"
+    />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+            rel="stylesheet"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+    <!--
+    - preload images
+  -->
+    <link rel="preload" as="image" href="{% static 'images/bg.jpg' %}"/>
+    <link rel="preload" as="image" href=".{% static 'images/pattern-2.svg' %}"/>
+    <link rel="preload" as="image" href=".{% static 'images/pattern-3.svg' %}"/>
+</head>
+
+<body id="top">
+<!--
+- #HEADER
+-->
+{% include 'includes/navbar.html' %}
+<main>
+    {% block content %}{% endblock %}
+</main>
+{% include 'includes/footer.html' %}
+<!--
+- #FOOTER
+-->
+
+<!--
+- #BACK TO TOP
+-->
+
+<a
+        href="#top"
+        class="back-top-btn"
+        aria-label="back to top"
+        data-back-top-btn
+>
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+</a>
+
+<!--
+- custom js link
+-->
+<script src="{% static 'js/script.js' %}"></script>
+
+<!--
+- ionicon link
+-->
+<script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+</body>
+</html>

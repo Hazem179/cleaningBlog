@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <section class="hero" id="home" aria-label="home">
+          <div class="container">
+            <div class="hero-content">
+              <p class="hero-subtitle">نبذة عن شركتنا</p>
+
+              <h1 class="headline headline-1 section-title">
+                سما كلين
+                <span class="span"> لخدمات التنظيف ومكافحة الحشرات</span>
+              </h1>
+
+              <p class="hero-text">
+                شركة الألمانية كلين هي شركة متخصصة في مجالات الخدمات المنزلية
+                مثل خدمات: (التنظيف، مكافحة الحشرات، العزل، كشف التسربات، فك
+                وتركيب وصيانة المكيفات). وتتواجد شركة الألمانية كلين وتقدم
+                خدماتها في السوق المحلي بجميع مدن المملكة منذ أكثر من 40 عام تحت
+                اشراف نخبة من الخبراء والفنيين والمتخصصين ذو الخبرة العالية في
+                جميع مجالات الخدمات التي قمنا بذكرها وبأرخص الأسعار والميزانيات
+                المناسبة لك. تابع معنا لتعرف المزيد عن شركة الألمانية كلين وماذا
+                يجعلنا شركة تستحق ثقتك الغالية.
+              </p>
+
+            </div>
+
+            <div class="hero-banner">
+              <img
+                src="{% static 'images/aboutus.png' %}"
+                style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%"
+                alt=""
+                class="w-100 hero_banner_img"
+              />
+
+              <img
+                src="{% static 'images/pattern-2.svg' %}"
+                width="27"
+                height="26"
+                alt="shape"
+                class="shape shape-1"
+              />
+
+              <img
+                src="{% static 'images/pattern-3.svg' %}"
+                width="27"
+                height="26"
+                alt="shape"
+                class="shape shape-2"
+              />
+            </div>
+
+            <img
+              src="{% static 'images/shadow-1.svg' %}"
+              width="500"
+              height="800"
+              alt=""
+              class="hero-bg hero-bg-1"
+            />
+
+            <img
+              src="{% static 'images/shadow-2.svg' %}"
+              width="500"
+              height="500"
+              alt=""
+              class="hero-bg hero-bg-2"
+            />
+          </div>
+        </section>
+
+        <!-- 
+        - #Categories
+      -->
+        <section class="category" id="about" aria-label="category">
+          <div class="container">
+            <h2 class="category-title">أهداف شركتنا</h2>
+            <!-- Category Pragraph -->
+            <div class="category-pragraph">
+              <h4 class="card">
+                <ol>
+                  <li>
+                    تقديم خدمات متنوعة ومناسبة: احد اهم اهداف شركتنا هو تقديم
+                    مجموعة خدمات منزلية متكاملة ومتنوعة ومناسبة لجميع عملائنا
+                    وذلك حرصًا منا على رضائهم وحصولهم على أفضل جودة ممكنة وفي
+                    مكان واحد.
+                  </li>
+                  <li>
+                    الحصول على رضى عملائنا والحفاظ عليه: رضي عملائنا عن خدماتنا
+                    بدون أي منازع هو أهم هدف لدينا وذلك لأن رضى عملائنا عن
+                    خدماتنا يعني وبشكل واضح اننا في المسار الصحيح وهذا ما نسعى
+                    اليه دومًا.
+                  </li>
+                  <li>
+                    تقديم خدمات بأسعار وميزانيات مناسبة للجميع: ما نستفيد منه
+                    سواًء على المدى القريب او البعيد نرغب دومًا في وهب جزء منه
+                    لعملائنا مجددًا، هذا لأن مشاركة النجاح مع عملائنا يعني
+                    حصولنا على قاعدة عملاء وفية وواثقة في العلامة التجارية
+                    الخاصة بنا وفي جودة منتجاتنا.
+                  </li>
+                </ol>
+              </h4>
+            </div>
+            <!-- Category Pragraph -->
+            <div class="category-pragraph">
+              <h4 class="card">الخدمات التي نقدمها</h4>
+              <ol>
+                <li><a href="">خدمات التنظيف الشاملة</a></li>
+                <li><a href="">خدمات التنظيف الشاملة</a></li>
+                <li><a href="">خدمات التنظيف الشاملة</a></li>
+                <li><a href="">خدمات التنظيف الشاملة</a></li>
+                <li><a href="">خدمات التنظيف الشاملة</a></li>
+                <li><a href="">خدمات التنظيف الشاملة</a></li>
+              </ol>
+            </div>
+            <!-- Category Pragraph -->
+            <div class="category-pragraph">
+              <h4 class="card">المدن التي نقدم بها خدماتنا</h4>
+              <p>
+                اينما كنت في أي مدينٍة كانت من مدن المملكة يوجد لدينا خدمات
+                خصيصاً من أجلك حيث نقدم خدماتنا في العديد من الأماكن مثل المدن
+                التالية:
+              </p>
+              <ol>
+                <li>حفر الباطن.</li>
+                <li>حفر الباطن.</li>
+                <li>حفر الباطن.</li>
+                <li>حفر الباطن.</li>
+                <li>حفر الباطن.</li>
+                <li>حفر الباطن.</li>
+                <li>حفر الباطن.</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        <!-- 
+        - #Comments
+      -->
+        <section class="comments">
+          <div class="container">
+            <h2>التعليقات</h2>
+            <h4>
+              <span><ion-icon name="chatbubble-outline"></ion-icon></span>
+              تعليقات (0)
+            </h4>
+            <form>
+              <input type="text" name="yourname" placeholder="إسمك الكريم *" />
+              <input
+                type="email"
+                name="email"
+                placeholder="بريدك الإلكتروني *"
+              />
+              <textarea
+                name="comment"
+                placeholder="أكتب التعليق هنا .."
+              ></textarea>
+              <button class="" type="submit">إرســال التعليق</button>
+            </form>
+          </div>
+        </section>
+{% endblock %}
