@@ -81,8 +81,8 @@
                   <a href="{% url 'core:category' slug=category.slug %}" class="card-badge">{{ category.name }}</a>
 
                   <h3 class="headline headline-3 card-title">
-                    <a href="#" class="link hover-2"
-                      >شركة تنظيف كنب بالدمام | {{ contact_information.telephone }}</a
+                    <a href="{% url 'core:blog_post' %}" class="link hover-2"
+                      >{{ post.title}} | {{ contact_information.telephone }}</a
                     >
                   </h3>
 

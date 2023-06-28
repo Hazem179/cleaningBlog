@@ -44,9 +44,10 @@ def category(request,slug):
     context.update(categories_context())
     return render(request, 'site/category_page.html', context)
 
-def blog_post(request,slug):
-    category = Categories.objects.get(slug=slug)
-    post = Post.objects.filter(slug=slug)
-    context = {'category': category, 'post': post}
+def blog_post(request):
+    # category = Categories.objects.get(slug=slug)
+    # post = Post.objects.filter(slug=slug)
+    # context = {'category': category, 'post': post}
+    context = {}
     context.update(categories_context())
     return render(request, 'subPages/blogDetails_page.html', context)

@@ -109,3 +109,6 @@ def post_image_path(instance, filename):
 class PostPictures(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     image = models.ImageField(upload_to=post_image_path)
+    class Meta:
+        verbose_name = "صور الخدمة"
+        verbose_name_plural = "صور الخدمات"
