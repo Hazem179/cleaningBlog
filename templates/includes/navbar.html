@@ -20,13 +20,13 @@
     <ul class="navbar-list">
         {% for category in categories %}
         <li>
-            <a href="#home" class="navbar-link hover-1" data-nav-toggler
+            <a href="{% url 'core:category' slug=category.slug %}" class="navbar-link hover-1" data-nav-toggler
             >{{category}}</a
             >
             <div class="dropdown">
                 {% for subcategory in subcategories %}
                 {% if subcategory.category == category %}
-                <a class="dropdown-item">{{subcategory}}</a>
+                <a href="{% url 'core:category' slug=category.slug %}"  class="dropdown-item">{{subcategory}}</a>
                 {% endif %}
                 {% endfor %}
             </div>

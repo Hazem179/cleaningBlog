@@ -12,7 +12,7 @@
             <ul class="grid-list">
                 {% for category in categories %}
               <li>
-                <a href="{{ category.slug }}" class="card tag-btn">
+                <a href="{% url 'core:category' slug=category.slug %}" class="card tag-btn">
                   <div>
                     <h3 class="btn-text">{{ category.name }}</h3>
                   </div>

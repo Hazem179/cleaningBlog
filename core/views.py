@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import ServiceCities,Post,FrequentlyQuestions
+from .models import ServiceCities, Post, FrequentlyQuestions, Categories
 from .utils import categories_context
 
 
@@ -27,7 +27,6 @@ def blog(request):
     posts = Post.objects.all()
     context = {'posts': posts}
     context.update(categories_context())
-    print(context)
     return render(request, 'site/blog_page.html',context)
 
 
@@ -39,5 +38,15 @@ def frequently_questions(request):
 
 
 def category(request,slug):
-    context = categories_context()
-    return render(request, 'subPages/category.html',context)
+    category = Categories.objects.get(slug=slug)
+    posts = Post.objects.filter(category=category)
+    context = {'category': category, 'posts': posts}
+    context.update(categories_context())
+    return render(request, 'site/category_page.html', context)
+
+def blog_post(request,slug):
+    category = Categories.objects.get(slug=slug)
+    post = Post.objects.filter(slug=slug)
+    context = {'category': category, 'post': post}
+    context.update(categories_context())
+    return render(request, 'subPages/blogDetails_page.html', context)

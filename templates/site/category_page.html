@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+      <article>
+        <section class="hero" id="home" aria-label="home">
+
+        </section>
+
+        <!--
+        - #Categories
+      -->
+        <section class="category" id="category" aria-label="category">
+          <div class="container">
+            <h2 class="category-title">{{ category.name }}</h2>
+            <!-- Category Pragraph -->
+            <div class="category-pragraph">
+              <h4 class="card">شركة تنظيف بحفر الباطن</h4>
+              <p>
+                الألمانية كلين متميزة للغاية في جميع الخدمات الخاصة بكل شركة
+                تنظيف بحفر الباطن كما أننا نتميز في خدمات شركة تنظيف منازل بحفر
+                الباطن. ولهذا يجب عليك التعامل مع شركة الألمانية كلين أفضل شركة
+                تنظيف خزانات بحفر الباطن كما أننا نضمن لك أفضل جودة مع للخدمات
+                الخاصة بشركة تنظيف مجالس بحفر الباطن نوفر لك أيضاً الخدمات
+                الخاصة بأرخص شركة تنظيف سجاد بحفر الباطن.
+              </p>
+            </div>
+            <!-- Category Pragraph -->
+            <div class="category-pragraph">
+              <h4 class="card">شركة تنظيف مجالس بحفر الباطن</h4>
+              <p>
+                اننا دوماً نتميز وبشدة في كل الخدمات الخاصة بشركة تنظيف مجالس
+                بحفر الباطن هناك أيضاً أفضل شركة تنظيف كنب بحفر الباطن. وكذلك
+                غسيل كنب حفر الباطن كما نوفر أيضاً شركه تنظيف مجالس بحفر الباطن
+                وكذلك تنظيف كنب بحفر الباطن
+              </p>
+            </div>
+            <!-- Category Pragraph -->
+            <div class="category-pragraph">
+              <h4 class="card">شركة تنظيف بيوت بحفر الباطن</h4>
+              <p>
+                نوفر لك أفضل شركة تنظيف بيوت بحفر الباطن المتميزة مع الألمانية
+                كلين كما نوفر أيضاً تنظيف منازل بحفر الباطن. بسبب ذلك نعتبر افضل
+                شركة تنظيف منازل بحفر الباطن. كذلك نعتبر مقدم الخدمة المثالي في
+                مجال تنظيف فلل بحفر الباطن. وكذلك شركه نظافه بحفر الباطن وأيضاً
+                شركة تنظيف كنب بحفر.
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <!-- 
+        - #RECENT POST
+      -->
+    <section
+      class="section recent-post"
+      id="recent"
+      aria-labelledby="recent-label"
+    >
+      <div class="container">
+        <div class="post-main">
+          <ul class="grid-list">
+            {% for post in posts %}
+            <li class="card">
+              <div class="recent-post-card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 271; --height: 258"
+                >
+                  <img
+                    src="{{ post.image.url }}"
+                    width="271"
+                    height="258"
+                    loading="lazy"
+                    alt=""
+                    class="img-cover"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <a href="{% url 'core:category' slug=category.slug %}" class="card-badge">{{ category.name }}</a>
+
+                  <h3 class="headline headline-3 card-title">
+                    <a href="#" class="link hover-2"
+                      >شركة تنظيف كنب بالدمام | {{ contact_information.telephone }}</a
+                    >
+                  </h3>
+
+                  <p class="card-text">
+                      {{ post.description|truncatechars:100 }}
+                  </p>
+
+                  <div class="card-wrapper">
+                    <div class="btn show-more">المزيد</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+              {% endfor %}
+          </ul>
+
+          <nav aria-label="pagination" class="pagination">
+            <a href="#" class="pagination-btn" aria-label="previous page">
+              <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
+            </a>
+
+            <a href="#" class="pagination-btn">1</a>
+            <a href="#" class="pagination-btn">2</a>
+            <a href="#" class="pagination-btn">3</a>
+            <a href="#" class="pagination-btn" aria-label="more page">...</a>
+
+            <a href="#" class="pagination-btn" aria-label="next page">
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </section>
+</article>
+{% endblock %}

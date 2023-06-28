@@ -1,3 +1,4 @@
+import os
 from django.db import models
 from django.utils.text import slugify
 
@@ -40,6 +41,7 @@ class Post(models.Model):
     subcategory = models.ForeignKey(SubCategories, on_delete=models.CASCADE,verbose_name="القسم الفرعي")
     description = models.TextField(verbose_name="الوصف")
     image = models.ImageField(upload_to='post',verbose_name="الصورة")
+    content = models.TextField(blank=True)
 
     def save(self, *args, **kwargs):
         title = self.title
@@ -89,3 +91,21 @@ class FrequentlyQuestions(models.Model):
     class Meta:
         verbose_name = "الأسئلة الشائعة"
         verbose_name_plural = "الأسئلة الشائعة"
+
+class CityPosts(models.Model):
+    city = models.ForeignKey(ServiceCities, on_delete=models.CASCADE,verbose_name="المدينة")
+    post = models.ForeignKey(Post, on_delete=models.CASCADE,verbose_name="الخدمة")
+    def __str__(self):
+        return self.city.name
+    class Meta:
+        verbose_name = "الخدمة في المدينة"
+        verbose_name_plural = "الخدمات في المدن"
+
+
+
+def post_image_path(instance, filename):
+    post_name = instance.post.title
+    return os.path.join('post', post_name, filename)
+class PostPictures(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to=post_image_path)
