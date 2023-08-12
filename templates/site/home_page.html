@@ -1,586 +1,556 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
-    <article>
-        <!--
+<article>
+  <!--
         - #HERO
       -->
-        <section class="hero" id="home" aria-label="home">
-            <div class="container">
-                <div class="hero-content">
-                    <p class="hero-subtitle">أهلا بكم في موقعنا</p>
+  <section class="hero" id="home" aria-label="home">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-subtitle">أهلا بكم في موقعنا</p>
 
-                    <h1 class="headline headline-1 section-title">
-                        سما كلين
-                        <span class="span"> لخدمات التنظيف ومكافحة الحشرات</span>
-                    </h1>
+        <h1 class="headline headline-1 section-title">
+          سما كلين
+          <span class="span"> لخدمات التنظيف ومكافحة الحشرات</span>
+        </h1>
 
-                    <p class="hero-text">
-                        شركة سما كلين هي شركة متخصصة في مجالات الخدمات المنزلية مثل
-                        خدمات: (التنظيف، مكافحة الحشرات، العزل، كشف التسربات، فك وتركيب
-                        وصيانة المكيفات). وتتواجد شركة سما كلين وتقدم خدماتها في السوق
-                        المحلي بجميع مدن المملكة منذ أكثر من 40 عام تحت اشراف نخبة من
-                        الخبراء والفنيين والمتخصصين ذو الخبرة العالية في جميع مجالات
-                        الخدمات التي قمنا بذكرها وبأرخص الأسعار والميزانيات المناسبة لك.
-                    </p>
-                </div>
-                <div class="hero-banner">
-                    <img
-                            src="{% static 'images/bg.jpg' %}"
-                            style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%"
-                            alt=""
-                            class="w-100 hero_banner_img"
-                    />
+        <p class="hero-text">
+          نحن شركة متخصصة في مجالات الخدمات المنزلية، مثل خدمات التنظيف، مكافحة
+          الحشرات، العزل، كشف التسربات، فك وتركيب وصيانة المكيفات. نتواجد في
+          السوق المحلي منذ أكثر من 40 عام، ولدينا فريق من الخبراء والفنيين
+          والمتخصصين ذو الخبرة العالية في جميع مجالات الخدمات التي قمنا بذكرها.
+          نلتزم بتقديم خدمات عالية الجودة وبأسعار معقولة. نحن نضمن أنك ستكون
+          راضيًا عن خدماتنا. إذا كنت تبحث عن شركة متخصصة في مجالات الخدمات
+          المنزلية، فلا تتردد في الاتصال بنا اليوم. نحن هنا لمساعدتك في الحفاظ
+          على منزلك نظيفًا وآمنًا وصحيًا.
+        </p>
+      </div>
+      <div class="hero-banner">
+        <img
+          src="{% static 'images/bg.jpg' %}"
+          style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%"
+          alt=""
+          class="w-100 hero_banner_img"
+        />
 
-                    <img
-                            src="{% static 'images/pattern-2.svg' %}"
-                            width="27"
-                            height="26"
-                            alt="shape"
-                            class="shape shape-1"
-                    />
+        <img
+          src="{% static 'images/pattern-2.svg' %}"
+          width="27"
+          height="26"
+          alt="shape"
+          class="shape shape-1"
+        />
 
-                    <img
-                            src="{% static 'images/pattern-3.svg' %}"
-                            width="27"
-                            height="26"
-                            alt="shape"
-                            class="shape shape-2"
-                    />
-                </div>
+        <img
+          src="{% static 'images/pattern-3.svg' %}"
+          width="27"
+          height="26"
+          alt="shape"
+          class="shape shape-2"
+        />
+      </div>
 
-                <img
-                        src="{% static 'images/shadow-1.svg' %}"
-                        width="500"
-                        height="800"
-                        alt=""
-                        class="hero-bg hero-bg-1"
-                />
+      <img
+        src="{% static 'images/shadow-1.svg' %}"
+        width="500"
+        height="800"
+        alt=""
+        class="hero-bg hero-bg-1"
+      />
 
-                <img
-                        src="{% static 'images/shadow-2.svg' %}"
-                        width="500"
-                        height="500"
-                        alt=""
-                        class="hero-bg hero-bg-2"
-                />
-            </div>
-        </section>
+      <img
+        src="{% static 'images/shadow-2.svg' %}"
+        width="500"
+        height="500"
+        alt=""
+        class="hero-bg hero-bg-2"
+      />
+    </div>
+  </section>
 
-        <!--
+  <!--
         - #TOPICS
       -->
 
-        <section class="topics" id="topics" aria-labelledby="topic-label">
-            <div class="container">
-                <div class="card topic-card">
-                    <div class="card-content">
-                        <h2
-                                class="headline headline-2 section-title card-title"
-                                id="topic-label"
-                        >
-                            خدماتنا المميزة
-                        </h2>
+  <section class="topics" id="topics" aria-labelledby="topic-label">
+    <div class="container">
+      <div class="card topic-card">
+        <div class="card-content">
+          <h2
+            class="headline headline-2 section-title card-title"
+            id="topic-label"
+          >
+            خدماتنا المميزة
+          </h2>
 
-                        <p class="card-text">
-                            شركة سما كلين بلا أدنى شك هي أفضل شركة تقدم خدمات منزلية في
-                            المملكة العربية السعودية بالكامل. على سبيل المثال خدمات
-                            التنظيف مثل خدمة تنظيف المنازل والسجاد والكنب والمجالس
-                            والستائر والمكيفات وجلي البلاط والسيراميك في حفر الباطن
-                            والدمام وعرعر والقيصومة وسكاكا ودومة الجندل وخميس مشيط وابها.
-                        </p>
+          <p class="card-text">
+            شركة سما كلين هي أفضل شركة تقدم خدمات منزلية في المملكة العربية السعودية بالكامل. نحن نقدم مجموعة واسعة من الخدمات، بما في ذلك تنظيف المنازل،  تنظيف السجاد، تنظيف الكنب، تنظيف المجالس، تنظيف الستائر، تنظيف المكيفات، جلي البلاط والسيراميك
+لدينا فريق من المهنيين المدربين تدريباً عالياً الذين لديهم خبرة في جميع أنواع الخدمات المنزلية. نحن نستخدم أحدث المعدات والتقنيات لضمان أن نحصل على أفضل النتائج.
+نقدم خدماتنا في جميع أنحاء المملكة العربية السعودية. نخدم أكثر من 46 مدينة سعودية.
+          </p>
 
-                        <div class="btn-group">
-                            <button
-                                    class="btn-icon"
-                                    aria-label="previous"
-                                    data-slider-prev
-                            >
-                                <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
-                            </button>
+          <div class="btn-group">
+            <button class="btn-icon" aria-label="previous" data-slider-prev>
+              <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
+            </button>
 
-                            <button class="btn-icon" aria-label="next" data-slider-next>
-                                <ion-icon
-                                        name="arrow-forward"
-                                        aria-hidden="true"
-                                ></ion-icon>
-                            </button>
-                        </div>
-                    </div>
+            <button class="btn-icon" aria-label="next" data-slider-next>
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+        </div>
 
-                    <div class="slider" data-slider>
-                        <ul class="slider-list" data-slider-container>
-                            <li class="slider-item">
-                                <a href="#" class="slider-card">
-                                    <figure
-                                            class="slider-banner img-holder"
-                                            style="--width: 507; --height: 618"
-                                    >
-                                        <img
-                                                src="{% static 'images/topic-1.png' %}"
-                                                width="507"
-                                                height="618"
-                                                loading="lazy"
-                                                alt="Sport"
-                                                class="img-cover"
-                                        />
-                                    </figure>
+        <div class="slider" data-slider>
+          <ul class="slider-list" data-slider-container>
+            <li class="slider-item">
+              <a href="#" class="slider-card">
+                <figure
+                  class="slider-banner img-holder"
+                  style="--width: 507; --height: 618"
+                >
+                  <img
+                    src="{% static 'images/topic-1.png' %}"
+                    width="507"
+                    height="618"
+                    loading="lazy"
+                    alt="Sport"
+                    class="img-cover"
+                  />
+                </figure>
 
-                                    <div class="slider-content">
-                        <span class="slider-title"
-                        >أسعار غير قابلة للمنافسة</span
-                        >
+                <div class="slider-content">
+                  <span class="slider-title">
+                    تنفيذ الخدمة في الموعد المحدد 
+                    </span>
 
-                                        <p class="slider-subtitle">
-                                            مع سما كلين سوف تحصل علي عروض وأسعار منتجات وخدمات غير
-                                            قابلة للمنافسة في منطقة حفر الباطن.
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
+                  <p class="slider-subtitle"> نحن نعلم أن الوقت هو أثمن ما تملك، لذلك نحرص على تقديم خدماتنا في الوقت المحدد وبأعلى جودة ممكنة.
 
-                            <li class="slider-item">
-                                <a href="#" class="slider-card">
-                                    <figure
-                                            class="slider-banner img-holder"
-                                            style="--width: 507; --height: 618"
-                                    >
-                                        <img
-                                                src="{% static 'images/topic-2.png' %}"
-                                                width="507"
-                                                height="618"
-                                                loading="lazy"
-                                                alt="Travel"
-                                                class="img-cover"
-                                        />
-                                    </figure>
-
-                                    <div class="slider-content">
-                        <span class="slider-title"
-                        >خدمة مميزة وعمالة ماهرة</span
-                        >
-
-                                        <p class="slider-subtitle">
-                                            في سما كلين نسعى دائماً لتقديم أفضل وأكثر خدمة مميزة
-                                            ممكنة على أيدي عمالة ماهرة ومدربة علي أعلى مستوى.
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="slider-item">
-                                <a href="#" class="slider-card">
-                                    <figure
-                                            class="slider-banner img-holder"
-                                            style="--width: 507; --height: 618"
-                                    >
-                                        <img
-                                                src="{% static 'images/topic-3.png' %}"
-                                                width="507"
-                                                height="618"
-                                                loading="lazy"
-                                                alt="Design"
-                                                class="img-cover"
-                                        />
-                                    </figure>
-
-                                    <div class="slider-content">
-                        <span class="slider-title"
-                        >تنفيذ الخدمة في الموعد المحدد</span
-                        >
-
-                                        <p class="slider-subtitle">
-                                            مع سما كلين سوف تحصل على خدماتك في الميعاد الذي تم
-                                            تحديده بدقة شديدة.
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="slider-item">
-                                <a href="#" class="slider-card">
-                                    <figure
-                                            class="slider-banner img-holder"
-                                            style="--width: 507; --height: 618"
-                                    >
-                                        <img
-                                                src="{% static 'images/topic-4.png' %}"
-                                                width="507"
-                                                height="618"
-                                                loading="lazy"
-                                                alt="Movie"
-                                                class="img-cover"
-                                        />
-                                    </figure>
-
-                                    <div class="slider-content">
-                                        <span class="slider-title">مجموعة خدمات متميزة</span>
-
-                                        <p class="slider-subtitle">
-                                            نقدم مجموعة مختارة ومتنوعة ومتميزة من خدمات التنظيف
-                                            والعزل والمكيفات ومكافحة الحشرات وغسيل السجاد والموكيت
-                                            وأكثر.
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                  </p>
                 </div>
-            </div>
-        </section>
+              </a>
+            </li>
 
-        <!--
+            <li class="slider-item">
+              <a href="#" class="slider-card">
+                <figure
+                  class="slider-banner img-holder"
+                  style="--width: 507; --height: 618"
+                >
+                  <img
+                    src="{% static 'images/topic-2.png' %}"
+                    width="507"
+                    height="618"
+                    loading="lazy"
+                    alt="Travel"
+                    class="img-cover"
+                  />
+                </figure>
+
+                <div class="slider-content">
+                  <span class="slider-title">خدمة مميزة وعمالة ماهرة</span>
+
+                  <p class="slider-subtitle">
+                    نسعى دائمًا إلى التحسين وتطوير خدماتنا، حتى نتمكن من تقديم أفضل تجربة لعملائنا
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a href="#" class="slider-card">
+                <figure
+                  class="slider-banner img-holder"
+                  style="--width: 507; --height: 618"
+                >
+                  <img
+                    src="{% static 'images/topic-3.png' %}"
+                    width="507"
+                    height="618"
+                    loading="lazy"
+                    alt="Design"
+                    class="img-cover"
+                  />
+                </figure>
+
+                <div class="slider-content">
+                  <span class="slider-title"
+                    >تنفيذ الخدمة في الموعد المحدد</span
+                  >
+
+                  <p class="slider-subtitle">نحن نلتزم بتقديم خدمات عالية الجودة وبأسعار معقولة
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a href="#" class="slider-card">
+                <figure
+                  class="slider-banner img-holder"
+                  style="--width: 507; --height: 618"
+                >
+                  <img
+                    src="{% static 'images/topic-4.png' %}"
+                    width="507"
+                    height="618"
+                    loading="lazy"
+                    alt="Movie"
+                    class="img-cover"
+                  />
+                </figure>
+
+                <div class="slider-content">
+                  <span class="slider-title">مجموعة خدمات متميزة</span>
+
+                  <p class="slider-subtitle">
+                    نقدم مجموعة مختارة ومتنوعة ومتميزة من خدمات التنظيف والعزل
+                    والمكيفات ومكافحة الحشرات وغسيل السجاد والموكيت وأكثر.
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
         - #FEATURED POST
       -->
 
-        <section class="section feature" aria-label="feature" id="featured">
-            <div class="container">
-                <h2 class="headline headline-2 section-title">
-                    <span class="span">الخدمات التي نقدمها </span>
-                </h2>
+  <section class="section feature" aria-label="feature" id="featured">
+    <div class="container">
+      <h2 class="headline headline-2 section-title">
+        <span class="span">الخدمات التي نقدمها </span>
+      </h2>
 
-                <p class="section-text">
-                    نوفر لك مجموعة من أفضل وأرقى خدمات التنظيف ومكافحة الحشرات وفك
-                    وتركيب المكيفات وكشف التسربات والعزل في حفر الباطن والدمام وعرعر
-                    والقيصومة وسكاكا ودومة الجندل بأفضل الأسعار.
-                </p>
+      <p class="section-text">
+        نقدم مجموعة متنوعة من الخدمات المنزلية، بما في ذلك: التنظيف، مكافحة الحشرات، فك وتركيب المكيفات، كشف التسربات وخدمات العزل.
 
-                <ul class="feature-list">
-                    <li>
-                        <div class="card feature-card">
-                            <figure
-                                    class="card-banner img-holder"
-                                    style="--width: 1602; --height: 903"
-                            >
-                                <img
-                                        src="{% static 'images/featured-1.png' %}"
-                                        width="1602"
-                                        height="903"
-                                        loading="lazy"
-                                        alt="Self-observation is the first step of inner unfolding"
-                                        class="img-cover"
-                                />
-                            </figure>
+      </p>
 
-                            <div class="card-content">
-                                <div class="card-wrapper">
-                                    <div class="card-tag">
-                                        <a href="#" class="span hover-2"
-                                        >خدمات التنظيف الشاملة</a
-                                        >
-                                    </div>
-                                </div>
+      <ul class="feature-list">
+        <li>
+          <div class="card feature-card">
+            <figure
+              class="card-banner img-holder"
+              style="--width: 1602; --height: 903"
+            >
+              <img
+                src="{% static 'images/featured-1.png' %}"
+                width="1602"
+                height="903"
+                loading="lazy"
+                alt="Self-observation is the first step of inner unfolding"
+                class="img-cover"
+              />
+            </figure>
 
-                                <h3 class="headline headline-3">
-                                    <a href="#" class="card-title hover-2">
-                                        شركة تنظيف كنب بالدمام | 0554926391
-                                    </a>
-                                </h3>
+            <div class="card-content">
+              <div class="card-wrapper">
+                <div class="card-tag">
+                  <a href="#" class="span hover-2">خدمات التنظيف الشاملة</a>
+                </div>
+              </div>
 
-                                <div class="card-wrapper">
-                                    <div class="profile-card">
-                                        <div>
-                                            <p class="card-title">
-                                                شركة تنظيف كنب بالدمام من أقدم وأعرق شركات التنظيف
-                                                حيث نمتلك الكثير من سنوات الخبرة التي تجعلنا دائمًا
-                                                على القمة دون منازع. كما أننا نُعرف بمصداقيتنا
-                                                وسرعتنا ودقة الخدمة التي نقدمها
-                                            </p>
-
-                                            <a href="#" class="card-btn card-more">Read more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="card feature-card">
-                            <figure
-                                    class="card-banner img-holder"
-                                    style="--width: 1602; --height: 903"
-                            >
-                                <img
-                                        src="{% static 'images/featured-2.png' %}"
-                                        width="1602"
-                                        height="903"
-                                        loading="lazy"
-                                        alt="Self-observation is the first step of inner unfolding"
-                                        class="img-cover"
-                                />
-                            </figure>
-
-                            <div class="card-content">
-                                <div class="card-wrapper">
-                                    <div class="card-tag">
-                                        <a href="#" class="span hover-2"
-                                        >خدمات مكافحة الحشرات والقوارض والحمام</a
-                                        >
-                                    </div>
-                                </div>
-
-                                <h3 class="headline headline-3">
-                                    <a href="#" class="card-title hover-2">
-                                        شركة تركيب طارد الحمام في الدمام | 0554926391
-                                    </a>
-                                </h3>
-
-                                <div class="card-wrapper">
-                                    <div class="profile-card">
-                                        <div>
-                                            <p class="card-title">
-                                                يعتبر تواجد الحمام بكثرة من أكبر المشاكل التي تواجه
-                                                جميع العملاء في الدمام وفي جميع أحياء المملكة
-                                                العربية السعودية، حيث يمكن أن يسبب الحمام الكثير من
-                                                الأضرار، سواء على مستوي
-                                            </p>
-
-                                            <a href="#" class="card-btn card-more">Read more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="card feature-card">
-                            <figure
-                                    class="card-banner img-holder"
-                                    style="--width: 1602; --height: 903"
-                            >
-                                <img
-                                        src="{% static 'images/featured-3.png' %}"
-                                        width="1602"
-                                        height="903"
-                                        loading="lazy"
-                                        alt="Self-observation is the first step of inner unfolding"
-                                        class="img-cover"
-                                />
-                            </figure>
-
-                            <div class="card-content">
-                                <div class="card-wrapper">
-                                    <div class="card-tag">
-                                        <a href="#" class="span hover-2"
-                                        >خدمات التنظيف الشاملة</a
-                                        >
-                                    </div>
-                                </div>
-
-                                <h3 class="headline headline-3">
-                                    <a href="#" class="card-title hover-2">
-                                        شركة تنظيف مستشفيات في الدمام | 0554926391
-                                    </a>
-                                </h3>
-
-                                <div class="card-wrapper">
-                                    <div class="profile-card">
-                                        <div>
-                                            <p class="card-title">
-                                                تقدم شركة تنظيف مستشفيات في الدمام جميع الخدمات
-                                                الخاصة بعمليات تنظيف وتعقيم المستشفيات العامة
-                                                والخاصة. لأن المستشفيات من الأماكن التي من الضروري
-                                                تنظيفها وتعقيمها بشكل مستمر لما يوجد بها من
-                                            </p>
-
-                                            <a href="#" class="card-btn card-more">Read more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="card feature-card">
-                            <figure
-                                    class="card-banner img-holder"
-                                    style="--width: 1602; --height: 903"
-                            >
-                                <img
-                                        src="{% static 'images/featured-4.png' %}"
-                                        width="1602"
-                                        height="903"
-                                        loading="lazy"
-                                        alt="Self-observation is the first step of inner unfolding"
-                                        class="img-cover"
-                                />
-                            </figure>
-
-                            <div class="card-content">
-                                <div class="card-wrapper">
-                                    <div class="card-tag">
-                                        <a href="#" class="span hover-2"
-                                        >خدمات التنظيف الشاملة</a
-                                        >
-                                    </div>
-                                </div>
-
-                                <h3 class="headline headline-3">
-                                    <a href="#" class="card-title hover-2">
-                                        شركة تنظيف واجهات زجاج بخميس مشيط | 0554926391 | عروض
-                                        تنظيف
-                                    </a>
-                                </h3>
-
-                                <div class="card-wrapper">
-                                    <div class="profile-card">
-                                        <div>
-                                            <p class="card-title">
-                                                الواجهات الخاصة بالمباني والشركة تعتبر بمثابة عامل
-                                                مهم لتحديد المظهر العام الداخلي والخارجي الخاص
-                                                بالشركة. لهذا تسعى العديد من الشركات الى الحفاظ على
-                                                شكل الواجهة نظيف للغاية باستخدام أفضل المواد
-                                            </p>
-
-                                            <a href="#" class="card-btn card-more">Read more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="card feature-card">
-                            <figure
-                                    class="card-banner img-holder"
-                                    style="--width: 1602; --height: 903"
-                            >
-                                <img
-                                        src="{% static 'images/featured-5.png' %}"
-                                        width="1602"
-                                        height="903"
-                                        loading="lazy"
-                                        alt="Self-observation is the first step of inner unfolding"
-                                        class="img-cover"
-                                />
-                            </figure>
-
-                            <div class="card-content">
-                                <div class="card-wrapper">
-                                    <div class="card-tag">
-                                        <a href="#" class="span hover-2"
-                                        >خدمات مكافحة الحشرات والقوارض والحمام</a
-                                        >
-                                    </div>
-                                </div>
-
-                                <h3 class="headline headline-3">
-                                    <a href="#" class="card-title hover-2">
-                                        شركة مكافحة فئران بابها | 0554926391 | إبادة قوارض بخصم
-                                        30%
-                                    </a>
-                                </h3>
-
-                                <div class="card-wrapper">
-                                    <div class="profile-card">
-                                        <div>
-                                            <p class="card-title">
-                                                تدرك شركة مكافحة الفئران بأبها أن المخاطر البيئية
-                                                والنفسية لانتقال الجرذان المختلفة تقع على عاتق
-                                                المواطنين. لذلك توفر خبراء متخصصون في مكافحة الفئران
-                                                وإبادتها بأجود المبيدات. كما نقدم أفضل الوسائل1
-                                            </p>
-
-                                            <a href="#" class="card-btn card-more">Read more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
-                <a href="#" class="btn btn-secondary">
-                    <span class="span">عرض المزيد</span>
-
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              <h3 class="headline headline-3">
+                <a href="#" class="card-title hover-2">
+                  شركة تنظيف كنب بالدمام | 0554926391
                 </a>
+              </h3>
+
+              <div class="card-wrapper">
+                <div class="profile-card">
+                  <div>
+                    <p class="card-title">
+                        نحن نستخدم أحدث المعدات والتقنيات لضمان الحصول على أفضل النتائج، كما أننا نستخدم مواد تنظيف آمنة على جميع أنواع الكنب.
+                        لدينا فريق من المهنيين المدربين تدريباً عالياً على تنظيف الكنب، وهم على دراية بجميع أنواع البقع وكيفية إزالتها.
+                        نحن نضمن أنك ستكون راضيًا عن خدماتنا، ونحن نسعى دائمًا إلى تقديم أفضل تجربة لعملائنا.
+                        
+                    </p>
+
+                    <a href="#" class="card-btn card-more">Read more</a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </li>
 
-            <img
-                    src="{% static 'images/shadow-3.svg' %}"
-                    width="500"
-                    height="1500"
-                    loading="lazy"
-                    alt=""
-                    class="feature-bg"
-            />
-        </section>
+        <li>
+          <div class="card feature-card">
+            <figure
+              class="card-banner img-holder"
+              style="--width: 1602; --height: 903"
+            >
+              <img
+                src="{% static 'images/featured-2.png' %}"
+                width="1602"
+                height="903"
+                loading="lazy"
+                alt="Self-observation is the first step of inner unfolding"
+                class="img-cover"
+              />
+            </figure>
 
-        <!--
+            <div class="card-content">
+              <div class="card-wrapper">
+                <div class="card-tag">
+                  <a href="#" class="span hover-2"
+                    >خدمات مكافحة الحشرات والقوارض والحمام</a
+                  >
+                </div>
+              </div>
+
+              <h3 class="headline headline-3">
+                <a href="#" class="card-title hover-2">
+                  شركة تركيب طارد الحمام في الدمام | 0554926391
+                </a>
+              </h3>
+
+              <div class="card-wrapper">
+                <div class="profile-card">
+                  <div>
+                    <p class="card-title">تواجد الحمام بكثرة من أكبر المشاكل التي تواجه جميع العملاء في الدمام وفي جميع أحياء المملكة العربية السعودية، حيث يمكن أن يسبب الحمام الكثير من الأضرار، سواء على مستوى الصحة أو على مستوى المظهر العام.
+                        كما يمكن أن يتسبب في تلف الممتلكات، مثل الأسطح والجدران والسقوف. كما يمكن أن يكون الحمام مصدرًا إزعاجًا كبيرًا، حيث يمكن أن يصدر ضوضاء عالية في أوقات غير مناسبة.
+                        نقدم خدمات مكافحة الحمام بطرق آمنة وفعالة. نستخدم أحدث التقنيات والأجهزة لضمان التخلص من الحمام نهائيًا من منزلك أو شركتك.
+                        
+                    </p>
+
+                    <a href="#" class="card-btn card-more">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="card feature-card">
+            <figure
+              class="card-banner img-holder"
+              style="--width: 1602; --height: 903"
+            >
+              <img
+                src="{% static 'images/featured-3.png' %}"
+                width="1602"
+                height="903"
+                loading="lazy"
+                alt="Self-observation is the first step of inner unfolding"
+                class="img-cover"
+              />
+            </figure>
+
+            <div class="card-content">
+              <div class="card-wrapper">
+                <div class="card-tag">
+                  <a href="#" class="span hover-2">خدمات التنظيف الشاملة</a>
+                </div>
+              </div>
+
+              <h3 class="headline headline-3">
+                <a href="#" class="card-title hover-2">
+                  شركة تنظيف مستشفيات في الدمام | 0554926391
+                </a>
+              </h3>
+
+              <div class="card-wrapper">
+                <div class="profile-card">
+                  <div>
+                    <p class="card-title">
+                        النظافة هي من أهم العوامل التي تساهم في سلامة المرضى في المستشفيات، حيث تساعد على الحد من انتشار العدوى والأمراض. لذلك، فإن تنظيف المستشفيات بشكل منتظم ودقيق أمر ضروري للغاية.
+                        نحن شركة تنظيف مستشفيات في الدمام، ونحن نوفر خدمات تنظيف شاملة وكاملة للمستشفيات العامة والخاصة. لدينا فريق من المهنيين المدربين تدريباً عالياً على تنظيف المستشفيات، وهم على دراية بجميع أنواع المخاطر التي يمكن أن تتعرض لها المستشفيات، وكيفية تجنبها.
+                        
+                    </p>
+
+                    <a href="#" class="card-btn card-more">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="card feature-card">
+            <figure
+              class="card-banner img-holder"
+              style="--width: 1602; --height: 903"
+            >
+              <img
+                src="{% static 'images/featured-4.png' %}"
+                width="1602"
+                height="903"
+                loading="lazy"
+                alt="Self-observation is the first step of inner unfolding"
+                class="img-cover"
+              />
+            </figure>
+
+            <div class="card-content">
+              <div class="card-wrapper">
+                <div class="card-tag">
+                  <a href="#" class="span hover-2">خدمات التنظيف الشاملة</a>
+                </div>
+              </div>
+
+              <h3 class="headline headline-3">
+                <a href="#" class="card-title hover-2">
+                  شركة تنظيف واجهات زجاج بخميس مشيط | 0554926391 | عروض تنظيف
+                </a>
+              </h3>
+
+              <div class="card-wrapper">
+                <div class="profile-card">
+                  <div>
+                    <p class="card-title">
+                        تعتبر واجهات الزجاج من أهم عناصر المظهر الخارجي لأي مبنى، فهي تعكس جمال المبنى وتجعله أكثر جاذبية. ومع ذلك، فإن واجهات الزجاج تحتاج إلى تنظيف وصيانة مستمرة للحفاظ على نظافتها ولمعانها.
+                        نوفر خدمات تنظيف شاملة وكاملة لكافة أنواع واجهات الزجاج. لدينا فريق من المهنيين المدربين تدريباً عالياً على تنظيف واجهات الزجاج، ونحن نستخدم أحدث المعدات والتقنيات لضمان الحصول على أفضل النتائج.
+                        
+                    </p>
+
+                    <a href="#" class="card-btn card-more">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card feature-card">
+            <figure
+              class="card-banner img-holder"
+              style="--width: 1602; --height: 903"
+            >
+              <img
+                src="{% static 'images/featured-5.png' %}"
+                width="1602"
+                height="903"
+                loading="lazy"
+                alt="Self-observation is the first step of inner unfolding"
+                class="img-cover"
+              />
+            </figure>
+
+            <div class="card-content">
+              <div class="card-wrapper">
+                <div class="card-tag">
+                  <a href="#" class="span hover-2"
+                    >خدمات مكافحة الحشرات والقوارض والحمام</a
+                  >
+                </div>
+              </div>
+
+              <h3 class="headline headline-3">
+                <a href="#" class="card-title hover-2">
+                  شركة مكافحة فئران بابها | 0554926391 | إبادة قوارض بخصم 30%
+                </a>
+              </h3>
+
+              <div class="card-wrapper">
+                <div class="profile-card">
+                  <div>
+                    <p class="card-title">
+إذا كنت تعاني من مشكلة الفئران والقوارض. سوف تساعدك الشركة على التخلص من الفئران والقوارض بشكل فعال وآمن، وسوف تحمي منزلك أو شركتك من الأضرار التي يمكن أن تسببها الفئران والقوارض.
+                    </p>
+
+                    <a href="#" class="card-btn card-more">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <a href="#" class="btn btn-secondary">
+        <span class="span">عرض المزيد</span>
+
+        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+      </a>
+    </div>
+
+    <img
+      src="{% static 'images/shadow-3.svg' %}"
+      width="500"
+      height="1500"
+      loading="lazy"
+      alt=""
+      class="feature-bg"
+    />
+  </section>
+
+  <!--
         - #POPULAR TAGS
       -->
 
-        <section class="tags" aria-labelledby="tag-label">
-            <div class="container">
-                <h2 class="headline headline-2 section-title" id="tag-label">
-                    <span class="span">التصنيفات </span>
-                </h2>
+  <section class="tags" aria-labelledby="tag-label">
+    <div class="container">
+      <h2 class="headline headline-2 section-title" id="tag-label">
+        <span class="span">التصنيفات </span>
+      </h2>
 
-                <p class="section-text">نقدم لك العديد من الخدمات</p>
+      <p class="section-text">نقدم لك العديد من الخدمات</p>
 
-                <ul class="grid-list">
-                {% for category in categories %}
-                    <li>
-                        <a href="{% url 'core:category' slug=category.slug %}" class="card tag-btn">
-                            <p class="btn-text">{{ category.name }}</p>
-                        </a>
-                    </li>
-                    {% endfor %}
-
-                </ul>
+      <ul class="grid-list">
+        {% for category in categories %}
+        <li>
+          <a
+            href="{% url 'core:category' slug=category.slug %}"
+            class="card tag-btn"
+          >
+            <p class="btn-text">{{ category.name }}</p>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  <section class="accordion" aria-labelledby="accordion-label">
+    <div class="container">
+      <h2 class="headline headline-2 section-title" id="accordion-label">
+        <span class="span">الأسئلة الشائعة </span>
+      </h2>
+      <div class="acc-container">
+        <div class="right">
+          <ul>
+            {% for question in questions %}
+            <li class="card">
+              <input type="checkbox" checked />
+              <i></i>
+              <h3>{{ question.title }}</h3>
+              <p>{{ question.content }}</p>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="left">
+          <div class="image-info">
+            <img
+              width="100%"
+              height="100%"
+              alt="الاسئلة الشائعة "
+              title="الاسئلة الشائعة "
+              src="https://germancleaning.com/wp-content/uploads/2022/02/3b137169-3316-4eb0-ba74-27175e154597.jpg"
+            />
+            <div class="image-two-info">
+              <img
+                width="100%"
+                height="100%"
+                alt="الاسئلة الشائعة "
+                title="الاسئلة الشائعة "
+                src="https://germancleaning.com/wp-content/uploads/2022/02/640x480.jpg"
+              />
             </div>
-        </section>
-        <section class="accordion" aria-labelledby="accordion-label">
-            <div class="container">
-                <h2 class="headline headline-2 section-title" id="accordion-label">
-                    <span class="span">الأسئلة الشائعة </span>
-                </h2>
-                <div class="acc-container">
-                    <div class="right">
-                        <ul>
-                  {% for question in questions %}
-                <li class="card">
-                  <input type="checkbox" checked />
-                    <i></i>
-                  <h3>{{ question.title }}</h3>
-                  <p>
-                    {{ question.content }}
-                  </p>
-                </li>
-                {% endfor %}
-              </ul>
-                    </div>
-                    <div class="left">
-                        <div class="image-info">
-                            <img
-                                    width="100%"
-                                    height="100%"
-                                    alt="الاسئلة الشائعة "
-                                    title="الاسئلة الشائعة "
-                                    src="https://germancleaning.com/wp-content/uploads/2022/02/3b137169-3316-4eb0-ba74-27175e154597.jpg"
-                            />
-                            <div class="image-two-info">
-                                <img
-                                        width="100%"
-                                        height="100%"
-                                        alt="الاسئلة الشائعة "
-                                        title="الاسئلة الشائعة "
-                                        src="https://germancleaning.com/wp-content/uploads/2022/02/640x480.jpg"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!--
+  <!--
         - #RECENT POST
-      --></article>
+      -->
+</article>
 {% endblock %}
